@@ -1,0 +1,62 @@
+﻿@model Developer
+
+@{
+	ViewData["Title"] = "Developer details";
+}
+
+<h2>Details</h2>
+
+@if (Model != null)
+{
+	<ol class="breadcrumb">
+		<li><a asp-action="Index">List of developers</a></li>
+		<li class="active"> / @Model.Name</li>
+	</ol>
+
+	<div>
+		<h4>Developer</h4>
+		<hr />
+		<dl class="dl-horizontal">
+			<dt>
+				ID
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.ID)
+			</dd>
+			<dt>
+				Developer name:
+			</dt>
+			<dd>
+				<a href="@Model.Website">
+					@Html.DisplayFor(model => model.Name)
+				</a>
+			</dd>
+			<dt>
+				Year founded
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.YearFounded)
+			</dd>
+			<dt>
+				City headquarters
+			</dt>
+			<dd>
+				@Model?.CityProject?.Name
+			</dd>	
+		</dl>
+
+		<div>
+			<a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Edit</a>
+		</div>
+		<br>
+	</div>
+
+}
+else
+{
+	<div class="alert alert-danger">
+		Not picked valid ID, or some other error
+	</div>
+
+}
+

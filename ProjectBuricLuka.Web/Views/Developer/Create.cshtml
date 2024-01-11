@@ -1,0 +1,20 @@
+﻿@model ProjectBuricLuka.Model.Developer
+
+@{
+	ViewData["Title"] = "Adding a new developer";
+}
+
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a asp-action="Index">List of developers</a></li>
+		<li class="breadcrumb-item active" aria-current="page">New developer</li>
+	</ol>
+</nav>
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<partial name="_CreateOrEdit" />
+		</form>
+	</div>
+</div>

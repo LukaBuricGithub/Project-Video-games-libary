@@ -1,0 +1,80 @@
+﻿@model VideoGame
+
+@{
+	ViewData["Title"] = "Video game details";
+}
+
+<h2>Details</h2>
+
+@if (Model != null)
+{
+	<ol class="breadcrumb">
+		<li><a asp-action="Index">List of video games</a></li>
+		<li class="active"> / @Model.Name</li>
+	</ol>
+
+	<div>
+		<h4>Video game</h4>
+		<hr />
+		<dl class="dl-horizontal">
+			<dt>
+				ID
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.ID)
+			</dd>
+			<dt>
+				Video game name:
+			</dt>
+			<dd>
+				<a href="@Model.Website">
+					@Html.DisplayFor(model => model.Name)
+				</a>
+			</dd>
+			<dt>
+				Genre
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.Genre)
+			</dd>
+			<dt>
+				Rating
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.Rating)
+			</dd>
+			<dt>
+				Release date
+			</dt>
+			<dd>
+				@Html.DisplayFor(model => model.ReleaseDate)
+			</dd>
+			<dt>
+				Publisher
+			</dt>
+			<dd>
+				@Model?.Publisher?.Name
+			</dd>
+			<dt>
+				Developer
+			</dt>
+			<dd>
+				@Model?.Developer?.Name
+			</dd>
+		</dl>
+
+		<div>
+			<a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Edit</a>
+		</div>
+		<br>
+	</div>
+
+}
+else
+{
+	<div class="alert alert-danger">
+		Not picked valid ID, or some other error
+	</div>
+
+}
+

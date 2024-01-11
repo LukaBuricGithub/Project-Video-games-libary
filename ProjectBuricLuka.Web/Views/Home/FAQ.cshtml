@@ -1,0 +1,56 @@
+﻿<style type="text/css">
+	.bold {
+		font-weight: bold;
+	}
+</style>
+@{
+	ViewData["Title"] = "FAQ";
+	var selectedNumber = (int?)ViewData["selected"];
+}
+<h2>@ViewData["Title"]</h2>
+<ul>
+	<li>
+		<div class="@(selectedNumber == 1 ? "bold" : "")">
+			Q: What is the name of the first consumer video game? 
+		</div>
+		<div>
+			A: Pong.
+		</div>
+	</li>
+
+	<li>
+		<div class="@(selectedNumber == 2 ? "bold" : "")">
+			Q: What is the top-selling video game console of all time?
+		</div>
+		<div>
+			A: Sonys Playstation 2.
+		</div>
+	</li>
+
+	<li>
+		<div class="@(selectedNumber == 3 ? "bold" : "")">
+			Q:  What is the top-selling video game of all time?
+		</div>
+		<div>
+			A: Tetris (500+ million copies sold).
+		</div>
+	</li>
+	<li>
+		<div class="@(selectedNumber == 4 ? "bold" : "")">
+			Q:  What company has the highest gaming revenue in the world?
+		</div>
+		<div>
+			A: Sony ($24.9 billion).
+		</div>
+	</li>
+	<li>
+		<div class="@(selectedNumber == 5 ? "bold" : "")">
+			Q:  What is the most expensive gaming company acquisition?
+		</div>
+		<div>
+			A: Microsofts purchase of Activision Blizzard (the cost was $68.7 billion ).
+		</div>
+	</li>
+</ul>
+
+

@@ -1,0 +1,15 @@
+﻿@using ProjectBuricLuka.Web.Models
+
+@model DeveloperFilterModel
+
+<form action="@Url.Action("Index")" method="post">
+	<div class="row">
+		<div class="col">
+			<input asp-for="Name" class="form-control" type="text" placeholder="Name"/>
+		</div>
+		<div class="col">
+			<button type="submit" class="btn btn-info">Search</button>
+			<a asp-action="Create" class="btn btn-success">New</a>
+		</div>
+	</div>
+</form>

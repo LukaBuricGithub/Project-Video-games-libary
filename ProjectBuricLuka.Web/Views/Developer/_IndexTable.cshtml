@@ -1,0 +1,32 @@
+﻿@model List<Developer>
+
+<table style="margin-top: 20px;" class="table table-condensed">
+	<thead>
+		<tr>
+			<th>Developer</th>
+			<th>Website</th>
+			<th>Year founded</th>
+			<th>City headquarters</th>
+			<th></th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					<a asp-action="Details" asp-route-id="@item.ID">@item.Name</a>
+				</td>
+				<td><a href="@item.Website">Visit official website</a></td>
+				<td>@item.YearFounded</td>
+				<td>@item.CityProject?.Name</td>
+				<td>
+				<a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-outline-primary">Edit</a>
+				</td>
+			
+			</tr>
+		}
+	</tbody>
+</table> 

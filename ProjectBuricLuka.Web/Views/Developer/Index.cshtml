@@ -1,0 +1,19 @@
+﻿@model List<Developer>
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<h1>List of developers</h1>
+<div style="margin-top: 20px; margin-bottom: 10px;">
+	<partial name="_DeveloperFilter" model="new DeveloperFilterModel()" />
+</div>
+
+<div id="filter">
+	<partial name="_IndexTable" />
+</div>
+
+
+
+
+ 

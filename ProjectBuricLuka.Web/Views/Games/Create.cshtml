@@ -1,0 +1,20 @@
+﻿@model ProjectBuricLuka.Model.VideoGame
+
+@{
+	ViewData["Title"] = "Adding a new video game";
+}
+
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a asp-action="Index">List of video games</a></li>
+		<li class="breadcrumb-item active" aria-current="page">New game</li>
+	</ol>
+</nav>
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<partial name="_CreateOrEdit" />
+		</form>
+	</div>
+</div>

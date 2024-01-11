@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Vjezba.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "hotReloadEnabled": false,
+      "applicationUrl": "https://localhost:7010",
+      "dotnetRunMessages": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+﻿@using ProjectBuricLuka.Web.Models
+
+@model GamesFilterModel
+
+<form action="@Url.Action("Index")" method="post">
+	<div class="row">
+		<div class="col">
+			<input asp-for="Name" class="form-control" type="text" placeholder="Name"/>
+		</div>
+		<div class="col">
+			<input asp-for="Genre" class="form-control" type="text" placeholder="Genre" />
+		</div>
+		<div class="col">
+			<input asp-for="Publisher" class="form-control" type="text" placeholder="Publisher" />
+		</div>
+		<div class="col">
+			<input asp-for="Developer" class="form-control" type="text" placeholder="Developer" />
+		</div>
+		<div class="col">
+			<button type="submit" class="btn btn-info">Search</button>
+			<a asp-action="Create" class="btn btn-success">New</a>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,34 @@
+﻿@model List<VideoGame>
+
+<table style="margin-top: 20px;" class="table table-condensed">
+	<thead>
+		<tr>
+			<th>Video Game</th>
+			<th>Genre</th>
+			<th>Rating</th>
+			<th>Developer</th>
+			<th>Publisher</th>
+			<th></th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					<a asp-action="Details" asp-route-id="@item.ID">@item.Name</a>
+				</td>
+				<td>@item.Genre</td>
+				<td>@item.Rating</td>
+				<td>@item.Developer?.Name</td>
+				<td>@item.Publisher?.Name</td>
+				<td>
+				<a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-outline-primary">Edit</a>
+				</td>
+			
+			</tr>
+		}
+	</tbody>
+</table> 

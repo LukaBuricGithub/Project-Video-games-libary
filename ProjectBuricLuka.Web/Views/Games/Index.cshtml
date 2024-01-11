@@ -1,0 +1,19 @@
+﻿@model List<VideoGame>
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<h1>List of video games</h1>
+<div style="margin-top: 20px; margin-bottom: 10px;">
+	<partial name="_GameFilter" model="new GamesFilterModel()" />
+</div>
+
+<div id="filter">
+	<partial name="_IndexTable" />
+</div>
+
+
+
+
+ 
